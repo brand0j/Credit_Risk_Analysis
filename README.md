@@ -39,8 +39,9 @@ For a better understanding concerning the measurements we will be looking at, it
 **Balanced Accuracy Score**: *0.5442*
 
 ### SMOTEENN
-![]()
-![]()
+![cm_SMOTEENN](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_SMOTEENN.PNG)
+![class_report_SMOTEENN](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_SMOTEENN.PNG)
+
 **Balanced Accuracy Score**: *0.6786*
 
 ## Balanced Random Forest Classifier
