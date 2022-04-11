@@ -14,21 +14,38 @@ For a better understanding concerning the measurements we will be looking at, it
 
 ## Oversampling
 ### RandomOverSample
-balanced_accuracy_score: 0.6571
+![cm_RandomOverSample](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_RandomOverSample.PNG)
+![class_report_RandomOverSample](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_RandomOverSample.PNG)
+
+**Balanced Accuracy Score**: *0.6571*
 
 ### SMOTE Oversampling
-balanced_accuracy_score: 0.6536
+![cm_SMOTE](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_SMOTE.PNG)
+![class_report_SMOTE](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_SMOTE.PNG)
+
+**Balanced Accuracy Score**: *0.6536*
 
 ## Undersampling
 
 ### ClusterCentroids
-balanced_accuracy_score: 0.5442
+![cm_ClusterCentroids](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_ClusterCentroids.PNG)
+![class_report_ClusterCentroids](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_ClusterCentroids.PNG)
+
+**Balanced Accuracy Score**: *0.5442*
 
 ### SMOTEENN
-balanced_accuracy_score: 0.6786
+![]()
+![]()
+**Balanced Accuracy Score**: *0.6786*
 
 ## BalancedRandomForestClassifier
-balanced_accuracy_score: 0.7878
+![cm_BalancedRandomForestClassifier](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_BalancedRandomForestClassifier.PNG)
+![class_report_BalancedRandomForestClassifier](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_BalancedRandomForestClassifier.PNG)
+
+**Balanced Accuracy Score**: *0.7878*
 
 ## EasyEnsembleClassifier
-balance_accuracy_score: 0.9254
+![cm_EasyEnsembleAdaBoostClassifier](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_EasyEnsembleAdaBoostClassifier.PNG)
+![class_report_EasyEnsembleAdaBoostClassifier](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_EasyEnsembleAdaBoostClassifier.PNG)
+
+**Balanced Accuracy Score**: *0.9254*
