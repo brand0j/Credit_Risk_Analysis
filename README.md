@@ -8,18 +8,22 @@ Our objective in this project was to utilize multiple machine-learning algorithm
 - Two machine learning models to help reduce bias when resampling, [BalancedRandomForestClassifier](https://imbalanced-learn.org/stable/references/generated/imblearn.ensemble.BalancedRandomForestClassifier.html) and [EasyEnsembleClassifier](https://imbalanced-learn.org/stable/references/generated/imblearn.ensemble.EasyEnsembleClassifier.html)
 
 ## Resources
+
 For a better understanding concerning the measurements we will be looking at, it might be helpful to familiarize yourself with [Precision & Recall](https://en.wikipedia.org/wiki/Precision_and_recall). We will be using these measurements along with F1-measure to gauge which model performs the best overall.
 
 ## Results
 
 ## Oversampling
-### RandomOverSample
+
+### Random Over Sample
+
 ![cm_RandomOverSample](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_RandomOverSample.PNG)
 ![class_report_RandomOverSample](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_RandomOverSample.PNG)
 
 **Balanced Accuracy Score**: *0.6571*
 
 ### SMOTE Oversampling
+
 ![cm_SMOTE](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_SMOTE.PNG)
 ![class_report_SMOTE](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_SMOTE.PNG)
 
@@ -27,7 +31,8 @@ For a better understanding concerning the measurements we will be looking at, it
 
 ## Undersampling
 
-### ClusterCentroids
+### Cluster-Centroids
+
 ![cm_ClusterCentroids](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_ClusterCentroids.PNG)
 ![class_report_ClusterCentroids](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_ClusterCentroids.PNG)
 
@@ -38,13 +43,15 @@ For a better understanding concerning the measurements we will be looking at, it
 ![]()
 **Balanced Accuracy Score**: *0.6786*
 
-## BalancedRandomForestClassifier
+## Balanced Random Forest Classifier
+
 ![cm_BalancedRandomForestClassifier](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_BalancedRandomForestClassifier.PNG)
 ![class_report_BalancedRandomForestClassifier](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_BalancedRandomForestClassifier.PNG)
 
 **Balanced Accuracy Score**: *0.7878*
 
-## EasyEnsembleClassifier
+## Easy Ensemble Classifier (AdaBoost)
+
 ![cm_EasyEnsembleAdaBoostClassifier](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_EasyEnsembleAdaBoostClassifier.PNG)
 ![class_report_EasyEnsembleAdaBoostClassifier](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_EasyEnsembleAdaBoostClassifier.PNG)
 
