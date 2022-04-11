@@ -38,20 +38,24 @@ For a better understanding concerning the measurements we will be looking at, it
 
 **Balanced Accuracy Score**: *0.5442*
 
+## Combined (Over & Under) Sampling
+
 ### SMOTEENN
 ![cm_SMOTEENN](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_SMOTEENN.PNG)
 ![class_report_SMOTEENN](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_SMOTEENN.PNG)
 
 **Balanced Accuracy Score**: *0.6786*
 
-## Balanced Random Forest Classifier
+## Ensemble Classifiers
+
+### Balanced Random Forest Classifier
 
 ![cm_BalancedRandomForestClassifier](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_BalancedRandomForestClassifier.PNG)
 ![class_report_BalancedRandomForestClassifier](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_BalancedRandomForestClassifier.PNG)
 
 **Balanced Accuracy Score**: *0.7878*
 
-## Easy Ensemble Classifier (AdaBoost)
+### Easy Ensemble Classifier (AdaBoost)
 
 ![cm_EasyEnsembleAdaBoostClassifier](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_EasyEnsembleAdaBoostClassifier.PNG)
 ![class_report_EasyEnsembleAdaBoostClassifier](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_EasyEnsembleAdaBoostClassifier.PNG)
