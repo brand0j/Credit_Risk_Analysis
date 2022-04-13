@@ -20,14 +20,17 @@ For a better understanding concerning the measurements we will be looking at, it
 ![cm_RandomOverSample](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_RandomOverSample.PNG)
 ![class_report_RandomOverSample](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_RandomOverSample.PNG)
 
-**Balanced Accuracy Score**: *0.6571*
 
 ### SMOTE Oversampling
 
 ![cm_SMOTE](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_SMOTE.PNG)
 ![class_report_SMOTE](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_SMOTE.PNG)
 
-**Balanced Accuracy Score**: *0.6536*
+**Balanced Accuracy Score (RandomOverSample)**: *0.6571*
+
+**Balanced Accuracy Score(SMOTE)**: *0.6536*
+
+In this comparison we are looking at the overall performance between using ```RandomOverSample()``` and ```SMOTE()``` in python. While both are oversampling techniques, they differ slightly in their application. The key difference of SMOTE() is how the minority class is increased (for an instance in the minority class, a number of it's closest neighbors are chosen and based on those values, new ones are created). When comparing the two models it's important to keep in mind what our objective is so we can determine which one performs better on the dataset we are working with. As you can see above, both models are comparible when looking at the balanced accuracy scores and their precision (low-risk & high-risk), but the main difference is their sensitivity to both of these classifications. Using ```RandomOverSample()``` results in a sensitivity of 71% (high-risk) & 60% (low-risk), compared to ```SMOTE()``` which yields a sensitivity of 61% (high-risk) & 69% (low-risk). In the context of our data, it is more valuable to correctly identify high-risk applications which is why ```RandomOverSample()``` would be preffered in this comparison.
 
 ## Undersampling
 
@@ -38,13 +41,17 @@ For a better understanding concerning the measurements we will be looking at, it
 
 **Balanced Accuracy Score**: *0.5442*
 
+```ClusterCentroids()``` is similar to ```SMOTE()``` with how it chooses data points. It identifies clusters of the majority class, then generates synthetic data points (centroids) that are representative of the overall clusters. The majority class is then undersampled down to the size of the minority class. Using this technique we can see a degradation in the model's ability to accurately identify both high-risk & low-risk when compared to our results from ```RandomOverSample()```. It does a significantly worse job at identifying applicants who are low-risk (~40%) and shows in its balanced accuracy score. 
+
 ## Combined (Over & Under) Sampling
 
-### SMOTEENN
+### SMOTE-ENN
 ![cm_SMOTEENN](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_SMOTEENN.PNG)
 ![class_report_SMOTEENN](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_SMOTEENN.PNG)
 
 **Balanced Accuracy Score**: *0.6786*
+
+In this method we use a combination of sampling tactics. This first that is employed is one we have already covered, ```SMOTE()```, which is used to oversample the minority class, while using ENN(Edited Nearest Neighbors) to clean the resulting data. In this undersampling strategy, if the two nearest neighbors of a data poitn belong to two different classes, the data point is dropped altogether.
 
 ## Ensemble Classifiers
 
