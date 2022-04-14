@@ -51,7 +51,7 @@ In this comparison we are looking at the overall performance between using ```Ra
 
 **Balanced Accuracy Score**: *0.6786*
 
-In this method we use a combination of sampling tactics. This first that is employed is one we have already covered, ```SMOTE()```, which is used to oversample the minority class, while using ENN(Edited Nearest Neighbors) to clean the resulting data. In this undersampling strategy, if the two nearest neighbors of a data poitn belong to two different classes, the data point is dropped altogether.
+In this method we use a combination of sampling tactics. This first that is employed is one we have already covered, ```SMOTE()```, which is used to oversample the minority class, while using ENN(Edited Nearest Neighbors) to clean the resulting data. In this undersampling strategy, if the two nearest neighbors of a data poitn belong to two different classes, the data point is dropped altogether. Using this combination, we notice an increase in our sensitivity to predicted high-risk (~80% accurate) while suffering slightly identifying low-risk (~56% accurate). 
 
 ## Ensemble Classifiers
 
@@ -62,9 +62,17 @@ In this method we use a combination of sampling tactics. This first that is empl
 
 **Balanced Accuracy Score**: *0.7878*
 
+The ```BalancedRandomForestClassifier()``` aims to select bootstrap samples from the training dataset and fits a decision tree on each. The main difference from typical "bagging" techniques is that not all features are used for each of these bootstrap samples. This results in making decision trees more independent from one another which improves the overall ensemble prediction. This method also comes with a way to identify which features have the most impact on the model's decision by using ```feature_importances_```. Applying this method resulted in our highest balanced accuracy score, along with being able to correctly identify ~67% high-risk and ~91% low-risk.
+
 ### Easy Ensemble Classifier (AdaBoost)
 
 ![cm_EasyEnsembleAdaBoostClassifier](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/cm_EasyEnsembleAdaBoostClassifier.PNG)
 ![class_report_EasyEnsembleAdaBoostClassifier](https://github.com/brand0j/Credit_Risk_Analysis/blob/main/Resources/class_report_EasyEnsembleAdaBoostClassifier.PNG)
 
 **Balanced Accuracy Score**: *0.9254*
+
+```EasyEnsembleClassifier()``` is an ensemble of AdaBoost learners trained on different balanced bootstrap samples (by random under-sampling). Adaptive Boosting (AdaBoost) is where a model is trained and then evaluated. After evaluating the errors of the first model, another model is trained, except the newer model gives extra weight to the errors from the previous model. The goal is to minimize similar errors in the subsequent models which cascades through all future models and is repeated until the error rate has been minimized. To this effect it does an incredible job at correctly identifying both high-risk and low-risk cases (91% & 94% respectively)
+
+## Summary
+
+In the report for each model I was mostly concerned with the sensitivity (TP/TP+FN) instead of the precision (TP/TP+FP) since in terms of this dataset ```FP >>> TP``` since the ratio of high-risk to low-risk is extremely one sided (significantly more low-risk). The metric with the most importance in this scenrio became the sensitivity(recall) which gives a representation of how well our model is able to correctly identify true positives. In our analysis it is clear that the ```EasyEnsembleClassifier()``` outperforms all the other methods by a considerable margin. This is the method that should be employed for future credit-risk analysis moving forward. 
